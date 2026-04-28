@@ -1,16 +1,43 @@
-# React + Vite
+# EchoSync - AI-Powered Hospitality Crisis Management
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+EchoSync is a real-time, AI-driven crisis management hub designed for the Google Solution Challenge. It bridges the critical communication gap between panicked guests and isolated security teams during emergencies in large hospitality venues.
 
-Currently, two official plugins are available:
+## 🌟 Core Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Multi-Modal AI Threat Analysis:** Uses Google's **Gemini 2.5 Flash** to analyze both guest text and uploaded incident photos (e.g., a fire or medical emergency), instantly deducing the crisis severity and providing actionable recommendations.
+- **Auto-Translation Engine:** Completely eliminates the language barrier. Gemini automatically detects the guest's native language, translates the crisis to English for the Admin Control Dashboard, and preserves the original context.
+- **Two-Way "Lifeline" Status Sync:** Powered by **Firebase Realtime/Firestore**, the app provides sub-second status synchronization. When an Admin acknowledges an alert, the guest's mobile screen instantly transitions from a red "Panic" state to a calming green "Help Dispatched" state.
+- **Mission Control Dashboard:** A live, geolocated map utilizing the **Google Maps API** to track active anomalies and dispatch teams efficiently.
 
-## React Compiler
+## 🛠️ Technology Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend:** React.js (Vite), TailwindCSS v4, Lucide Icons, React Google Maps API.
+- **Backend:** Python (Flask), Google GenAI SDK (Gemini 2.5 Flash).
+- **Database:** Firebase Firestore (Realtime NoSQL).
+- **Deployment:** Vercel (Frontend), Render (Backend).
 
-## Expanding the ESLint configuration
+## 🚀 Future Integrations (Scaling for Impact)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **WearOS / Smartwatch Integration:** Developing a companion app for Google Pixel Watches that detects sudden falls or abnormal heart rate spikes, automatically triggering the EchoSync API without requiring the user to press a button.
+2. **Predictive Analytics & Heatmaps:** Upgrading the Admin Dashboard to utilize historical Firebase data to generate predictive heatmaps. This will allow venues to proactively station medical or security staff in statistically high-risk zones.
+3. **Automated Facility Interfacing:** Integrating EchoSync directly with IoT hotel infrastructure to automatically unlock emergency exits or trigger localized fire suppression systems based on Gemini's priority assessment.
+
+## 💻 Local Development Setup
+
+### Frontend
+```bash
+cd echosync-frontend
+npm install
+npm run dev
+```
+
+### Backend
+```bash
+cd echosync-backend
+# Activate virtual environment
+.\venv\Scripts\activate
+pip install -r requirements.txt
+python app.py
+```
+
+*Note: You must configure your own `.env` files with Firebase credentials, a Google Maps API Key, and a Gemini API Key to run locally.*
