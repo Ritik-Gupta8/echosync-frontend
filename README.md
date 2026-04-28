@@ -2,6 +2,11 @@
 
 EchoSync is a real-time, AI-driven crisis management hub designed for the Google Solution Challenge. It bridges the critical communication gap between panicked guests and isolated security teams during emergencies in large hospitality venues.
 
+## 🔗 Live Prototype Links
+- **Guest / Mobile View (Send SOS):** [https://echosync-frontend.vercel.app/](https://echosync-frontend.vercel.app/)
+- **Admin / Mission Control (Receive SOS):** [https://echosync-frontend.vercel.app/admin](https://echosync-frontend.vercel.app/admin)
+*(Tip: Open both links side-by-side to experience the Two-Way Real-Time status sync!)*
+
 ## 🌟 Core Features
 
 - **Multi-Modal AI Threat Analysis:** Uses Google's **Gemini 2.5 Flash** to analyze both guest text and uploaded incident photos (e.g., a fire or medical emergency), instantly deducing the crisis severity and providing actionable recommendations.
